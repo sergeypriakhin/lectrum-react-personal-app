@@ -1,0 +1,17 @@
+.filter {
+  // height: 64px;
+  margin-right: -24px;
+  margin-left: -24px;
+  margin-bottom: 40px;
+  padding: 20px 24px 10px;
+
+  background-color: #f7f8fa;
+
+  .container {
+    display: flex;
+    align-items: center;
+    @media (max-width: 680px) {
+      flex-wrap: wrap;
+    }
+  }
+}

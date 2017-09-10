@@ -1,0 +1,27 @@
+@import "../../theme/palette.scss";
+
+.search {
+  width: 100%;
+  margin-bottom: 10px;
+  .input {
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    font-weight: 400;
+    border-width: 1px;
+    border-style: solid;
+    white-space: nowrap;
+    user-select: none;
+    transition: border-color 0.4s, background-color 0.4s;
+    font-size: 14px;
+    line-height: 18px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: rgba(51, 52, 56, 0);
+    border-color: rgba(51, 52, 56, 0.4);
+    color: #333438;
+    padding: 6px 12px 6px 16px;
+    text-align: left;
+    outline-color: $paletteColor1;
+  }
+}

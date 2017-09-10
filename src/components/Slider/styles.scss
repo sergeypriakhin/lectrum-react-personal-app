@@ -1,0 +1,30 @@
+.leftArrow,
+.rightArrow {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 40px;
+  height: 60px;
+  padding: 0;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+  svg {
+    width: 40px;
+    height: 60px;
+    fill: #ec174f;
+  }
+}
+
+.leftArrow {
+  left: -28px;
+}
+
+.rightArrow {
+  right: -28px;
+}

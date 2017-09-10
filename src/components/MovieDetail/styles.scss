@@ -1,0 +1,59 @@
+.title {
+  color: #ec174f;
+
+  font-family: Roboto, iviextras, Arial, Helvetica, FreeSans, sans-serif;
+  font-size: 38px;
+  font-weight: 300;
+  line-height: 42px;
+  small {
+    font-size: 16px;
+    @media (max-width: 480px) {
+      display: block;
+      line-height: 1;
+    }
+  }
+}
+
+.poster {
+  position: relative;
+
+  display: block;
+
+  max-height: 600px;
+  overflow: hidden;
+  margin: 0px 0px 20px 0px;
+  img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.properties {
+  margin-right: -10px;
+  margin-bottom: 8px;
+
+  color: #333438;
+
+  // font-size: 0;
+  span {
+    margin-right: 10px;
+
+    font-size: 12px;
+  }
+  a {
+    padding-right: 6px;
+
+    text-decoration: underline;
+  }
+}
+
+.description {
+  margin-top: 23px;
+
+  color: #333438;
+}
