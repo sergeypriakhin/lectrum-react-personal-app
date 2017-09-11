@@ -6,9 +6,9 @@ import ReactDOM from 'react-dom';
 import './theme/reset.css';
 
 // App
-import App from './containers/App';
+import AppContainer from './containers/App';
 
 export default ReactDOM.render(
-    <App />,
+    <AppContainer />,
     document.getElementById('root') || document.createElement('div')
 );

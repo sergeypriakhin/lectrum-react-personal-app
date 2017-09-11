@@ -2,15 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 // Componets
-import Wrapper from '../../components/Wrapper';
-import MovieDetail from '../../components/MovieDetail';
-import ActorList from '../../components/ActorList';
-import RecommendationList from '../../components/RecommendationList';
+import Page from '../../components/Page';
 
-// Styles
-import Styles from './styles.scss';
-
-export default class Page extends Component {
+export default class PageContainer extends Component {
     static contextTypes = {
         apiKey: PropTypes.string.isRequired,
         api:    PropTypes.string.isRequired
@@ -121,24 +115,12 @@ export default class Page extends Component {
         const { movieDetail, actors, recommendations } = this.state;
 
         return (
-            <Wrapper>
-                <div className = { Styles.page }>
-                    <MovieDetail movieDetail = { movieDetail } />
-                    <div>
-                        <h3 className = { Styles.title }>Актеры: </h3>
-                        <ActorList actors = { actors } />
-                    </div>
-                    <div>
-                        <h3 className = { Styles.title }>
-                            Вместе с фильмом «{movieDetail.title}» также смотрят
-                        </h3>
-                        <RecommendationList
-                            recommendations = { recommendations }
-                            setMovieDeatil = { this.setMovieDeatil }
-                        />
-                    </div>
-                </div>
-            </Wrapper>
+            <Page
+                actors = { actors }
+                movieDetail = { movieDetail }
+                recommendations = { recommendations }
+                setMovieDeatil = { this.setMovieDeatil }
+            />
         );
     }
 }

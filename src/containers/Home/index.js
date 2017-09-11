@@ -2,12 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 // Components
-import RecommendationList from '../../components/RecommendationList';
+import Home from '../../components/Home';
 
-// Styles
-import Styles from './styles.scss';
-
-export default class Home extends Component {
+export default class HomeContainer extends Component {
     static contextTypes = {
         apiKey: PropTypes.string.isRequired,
         api:    PropTypes.string.isRequired
@@ -100,25 +97,7 @@ export default class Home extends Component {
         const { topRated, upcoming, popular } = this.state;
 
         return (
-            <section className = { Styles.container }>
-                <div>
-                    <h2 className = { Styles.title }>
-                        Cкоро в кино{' '}
-                        <small>
-                            {upcoming.dates.minimum} / {upcoming.dates.maximum}
-                        </small>
-                    </h2>
-                    <RecommendationList recommendations = { upcoming.results } />
-                </div>
-                <div>
-                    <h2 className = { Styles.title }>Самые популярные</h2>
-                    <RecommendationList recommendations = { topRated } />
-                </div>
-                <div>
-                    <h2 className = { Styles.title }>Популярные в Украине</h2>
-                    <RecommendationList recommendations = { popular } />
-                </div>
-            </section>
+            <Home popular = { popular } topRated = { topRated } upcoming = { upcoming } />
         );
     }
 }

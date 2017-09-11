@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 
 // Components
-import Wrapper from '../../components/Wrapper';
-import Filter from '../../components/Filter';
-import Card from '../../components/Card';
+import Films from '../../components/Films';
 
-// Styles
-import Styles from './styles.scss';
-
-export default class Films extends Component {
+export default class FilmsContainer extends Component {
     static contextTypes = {
         apiKey: PropTypes.string.isRequired,
         api:    PropTypes.string.isRequired
@@ -125,32 +119,16 @@ export default class Films extends Component {
             data = data.filter((s) => s.title.toLowerCase().match(searchString));
         }
 
-        const moviesList = data.map((item) => (
-            <Link className = { Styles.item } key = { item.id } to = { `/film/${item.id}` }>
-                <Card
-                    imgSrc = { item.poster_path }
-                    overview = { item.overview }
-                    title = { item.title }
-                    voteAverage = { item.vote_average }
-                />
-            </Link>
-        ));
-
         return (
-            <Wrapper>
-                <div>
-                    <Filter
-                        filterGenreName = { filterGenre.name }
-                        genreMovie = { genreMovie }
-                        handleChangeSearch = { this.handleChangeSearch }
-                        placeholder = 'Search movie'
-                        searchString = { this.state.searchString }
-                        setSortGenre = { this.setSortGenre }
-                        setSortMovie = { this.setSortMovie }
-                    />
-                </div>
-                <div className = { Styles.list }>{moviesList}</div>
-            </Wrapper>
+            <Films
+                data = { data }
+                filterGenre = { filterGenre }
+                genreMovie = { genreMovie }
+                handleChangeSearch = { this.handleChangeSearch }
+                searchString = { searchString }
+                setSortGenre = { this.setSortGenre }
+                setSortMovie = { this.setSortMovie }
+            />
         );
     }
 }
