@@ -48,17 +48,17 @@ export default class Card extends Component {
             </div>
         );
 
+        const image = imgSrc !== null && (
+            <img src = { `http://image.tmdb.org/t/p/original/${imgSrc}` } />
+        );
+
         return (
             <figure
                 className = { Styles.card }
                 onMouseEnter = { () => this.setShowOverviewState(true) }
                 onMouseLeave = { () => this.setShowOverviewState(false) }>
                 <div className = { Styles.imgWrap }>
-                    {imgSrc !== null && (
-                        <img
-                            src = { `http://image.tmdb.org/t/p/original/${imgSrc}` }
-                        />
-                    )}
+                    {image}
                     {overlay}
                 </div>
                 <figcaption className = { Styles.caption }>{title}</figcaption>

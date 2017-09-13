@@ -8,6 +8,8 @@ import SampleNextArrow from './SampleNextArrow';
 import '../../../node_modules/slick-carousel/slick/slick.css';
 import '../../../node_modules/slick-carousel/slick/slick-theme.css';
 
+import Styles from './styles.scss';
+
 export default class CustomSlider extends Component {
     static propTypes = {
         children: PropTypes.node
@@ -18,6 +20,7 @@ export default class CustomSlider extends Component {
             arrows:         true,
             dots:           false,
             infinite:       true,
+            adaptiveHeight: false,
             speed:          500,
             slidesToShow:   4,
             slidesToScroll: 4,
@@ -41,6 +44,10 @@ export default class CustomSlider extends Component {
             ]
         };
 
-        return <Slider { ...settings }>{this.props.children}</Slider>;
+        return (
+            <div className = { Styles.wrap }>
+                <Slider { ...settings }>{this.props.children}</Slider>
+            </div>
+        );
     }
 }

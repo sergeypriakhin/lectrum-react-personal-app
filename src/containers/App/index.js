@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { BrowserRouter as Router } from 'react-router-dom';
 
 // Components
-import ScrollToTop from '../../components/ScrollToTop';
 import App from '../../components/App';
 
 export const options = {
@@ -25,19 +23,7 @@ export default class AppContainer extends Component {
         return options;
     }
 
-    componentDidUpdate (prevProps) {
-        if (this.props.location !== prevProps.location) {
-            window.scrollTo(0, 0);
-        }
-    }
-
     render () {
-        return (
-            <Router>
-                <ScrollToTop>
-                    <App />
-                </ScrollToTop>
-            </Router>
-        );
+        return <App />;
     }
 }
