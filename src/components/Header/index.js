@@ -14,11 +14,11 @@ export default class Header extends Component {
                             <Link to = '/films'>Фильмы</Link>
                         </nav>
                     </div>
-                    <div>
+                    {/* <div>
                         <nav className = { Styles.nav }>
                             <a href = '#'>Мой список</a>
                         </nav>
-                    </div>
+                    </div> */}
                 </div>
             </header>
         );

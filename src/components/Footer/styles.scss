@@ -1,0 +1,26 @@
+.footer {
+  color: #fff;
+  background-color: rgb(52, 47, 90);
+
+  font-size: 12px;
+  font-weight: 300;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1170px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  .icon {
+    margin-right: 15px;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 24px;
+    &:hover {
+      color: #ec174f;
+    }
+  }
+}

@@ -1,13 +1,16 @@
 .list {
   display: flex;
   flex-wrap: wrap;
+
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .item {
   width: 100%;
   margin-bottom: 20px;
-  transition: box-shadow 0.2s ease, transform 0.3s ease-in;
 
+  transition: box-shadow 0.2s ease, transform 0.3s ease-in;
   text-decoration: none;
 
   box-shadow: 4px 4px 2px 0 rgba(0, 0, 0, 0.25);

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 // Componets
 import Page from '../../components/Page';
+import Spinner from '../../components/Spinner';
 
 export default class PageContainer extends Component {
     static contextTypes = {
@@ -26,7 +27,8 @@ export default class PageContainer extends Component {
     state = {
         movieDetail:     {},
         actors:          [],
-        recommendations: []
+        recommendations: [],
+        loading:         true
     };
 
     componentWillMount () {
@@ -67,6 +69,11 @@ export default class PageContainer extends Component {
             .then((detail) => {
                 this.setState({
                     movieDetail: detail
+                });
+            })
+            .then(() => {
+                this.setState({
+                    loading: false
                 });
             });
     }
@@ -112,9 +119,11 @@ export default class PageContainer extends Component {
     }
 
     render () {
-        const { movieDetail, actors, recommendations } = this.state;
+        const { movieDetail, actors, recommendations, loading } = this.state;
 
-        return (
+        const spinner = loading ? (
+            <Spinner />
+        ) : (
             <Page
                 actors = { actors }
                 movieDetail = { movieDetail }
@@ -122,5 +131,7 @@ export default class PageContainer extends Component {
                 setMovieDeatil = { this.setMovieDeatil }
             />
         );
+
+        return <div>{spinner}</div>;
     }
 }

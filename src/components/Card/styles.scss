@@ -9,31 +9,23 @@
 
   cursor: pointer;
   transition: box-shadow 0.3s ease, transform 0.3s ease-in;
-  // max-width: 220px;
-  // width: 25%;
-  // transform: scale(1);
-
-  // box-shadow: 4px 4px 2px 0 rgba(0, 0, 0, 0.25);
-
-  // &:hover {
-  //   z-index: 5;
-
-  //   transform: scale(1.05);
-
-  //   box-shadow: 2px 2px 1px 0 rgba(0, 0, 0, 0.25);
-  // }
 
   .imgWrap {
     position: relative;
 
-    height: 400px;
+    height: 350px;
 
     background-color: rgba(40, 35, 80, 0.7);
+    background-image: url(../../theme/assets/giphy-downsized.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
   img {
     width: 100%;
-    height: 400px;
+    height: 350px;
+    // max-height: 400px;
 
     object-fit: cover;
     object-position: center;
@@ -45,6 +37,7 @@
 
     display: flex;
     align-items: center;
+    flex: 1;
     justify-content: center;
 
     height: 100%;

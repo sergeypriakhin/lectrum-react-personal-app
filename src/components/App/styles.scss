@@ -1,12 +1,13 @@
 @import "../../theme/palette";
 
 body {
-  background-color: $paletteColor2;
   color: #333438;
+  background-color: $paletteColor2;
 }
 
 a {
   text-decoration: none;
+
   color: #333438;
 }
 
@@ -15,8 +16,10 @@ a {
 
   .main {
     position: relative;
+
     margin-top: 32px;
-    margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 32px;
+    margin-left: 10px;
   }
 }

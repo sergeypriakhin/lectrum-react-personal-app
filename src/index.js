@@ -1,7 +1,7 @@
 // Core
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 // Instruments
 import './theme/reset.css';
@@ -11,10 +11,10 @@ import AppContainer from './containers/App';
 import ScrollToTop from './components/ScrollToTop';
 
 ReactDOM.render(
-    <Router>
+    <BrowserRouter>
         <ScrollToTop>
             <AppContainer />
         </ScrollToTop>
-    </Router>,
+    </BrowserRouter>,
     document.getElementById('root')
 );

@@ -21,19 +21,19 @@ export default class MovieDetail extends Component {
 
         const genresList = genres.map(({ id, name }) => <a key = { id }>{name}</a>);
 
+        const poster = movieDetail.backdrop_path !== null && (
+            <img
+                alt = { movieDetail.original_title }
+                src = { `http://image.tmdb.org/t/p/original/${movieDetail.backdrop_path}` }
+            />
+        );
+
         return (
             <div>
                 <h1 className = { Styles.title }>
                     {title} <small>{tagline}</small>
                 </h1>
-                <figure className = { Styles.poster }>
-                    {movieDetail.backdrop_path !== null && (
-                        <img
-                            alt = { movieDetail.original_title }
-                            src = { `http://image.tmdb.org/t/p/original/${movieDetail.backdrop_path}` }
-                        />
-                    )}
-                </figure>
+                <figure className = { Styles.poster }>{poster}</figure>
                 <div>
                     <div className = { Styles.properties }>
                         <span>

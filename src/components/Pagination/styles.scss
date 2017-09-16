@@ -1,0 +1,47 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // margin-top: 40px;
+
+  margin-right: -24px;
+  margin-left: -24px;
+  padding: 20px 24px;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.09);
+  background-color: #f7f8fa;
+
+  .left,
+  .right {
+    cursor: pointer;
+
+    color: #ec174f;
+
+    font-size: 30px;
+  }
+  .disable {
+    pointer-events: none;
+
+    color: #737882;
+
+    font-size: 30px;
+  }
+  .countWrap {
+    display: flex;
+    align-items: center;
+  }
+  .count {
+    margin: 0 20px;
+
+    color: #333438;
+
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .totalResults {
+    color: #333438;
+
+    font-size: 24px;
+    font-weight: 700;
+  }
+}

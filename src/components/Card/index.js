@@ -44,7 +44,13 @@ export default class Card extends Component {
                         <MdPlaylistAdd />
                     </span>
                 </div>
-                <div className = { Styles.text }>{overview}</div>
+                <div className = { Styles.text }>
+                    {overview && overview.length > 150 ?
+                        `${overview.substring(0, 150)}...`
+                        :
+                        overview
+                    }
+                </div>
             </div>
         );
 

@@ -1,13 +1,15 @@
+// Core
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+// Components
 import Slider from 'react-slick';
 import SamplePrevArrow from './SamplePrevArrow';
 import SampleNextArrow from './SampleNextArrow';
 
+// Styles
 import '../../../node_modules/slick-carousel/slick/slick.css';
 import '../../../node_modules/slick-carousel/slick/slick-theme.css';
-
 import Styles from './styles.scss';
 
 export default class CustomSlider extends Component {
@@ -24,6 +26,7 @@ export default class CustomSlider extends Component {
             speed:          500,
             slidesToShow:   4,
             slidesToScroll: 4,
+            className:      Styles.slider,
             prevArrow:      <SamplePrevArrow />,
             nextArrow:      <SampleNextArrow />,
             responsive:     [
