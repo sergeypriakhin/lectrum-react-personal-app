@@ -12,9 +12,13 @@ const mutatedState = {
     nameActiveMenu: 'rating-filter'
 };
 
-const result = shallow(<Select name = 'Сортировать' submenu = 'rating-filter' />);
+const result = shallow(
+    <Select name = 'Сортировать' submenu = 'rating-filter'>
+        <span>Item 1</span>
+    </Select>
+);
 
-describe('Card component:', () => {
+describe('Select component:', () => {
     test('Should have 1 \'data-filter\' element', () => {
         expect(result.find('[data-filter="rating-filter"]').length).toBe(1);
     });

@@ -6,7 +6,7 @@ import MdArrowDropDown from 'react-icons/lib/md/arrow-drop-down';
 
 export default class Select extends Component {
     static propTypes = {
-        children: PropTypes.array.isRequired,
+        children: PropTypes.object.isRequired,
         name:     PropTypes.string.isRequired,
         submenu:  PropTypes.string.isRequired
     };
@@ -14,7 +14,6 @@ export default class Select extends Component {
     constructor () {
         super();
         this.toggleSubmenu = ::this._toggleSubmenu;
-        // this.activeMenu = ::this._activeMenu;
     }
 
     state = {
@@ -28,12 +27,6 @@ export default class Select extends Component {
             nameActiveMenu: name
         });
     }
-
-    // _activeMenu (name) {
-    //     this.setState({
-    //         nameActiveMenu: name
-    //     });
-    // }
 
     render () {
         const { name, children, submenu } = this.props;
